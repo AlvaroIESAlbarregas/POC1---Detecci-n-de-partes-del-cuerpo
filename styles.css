@@ -1,0 +1,94 @@
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #4a4e69;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 720px;
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        #cameraFeed, #capturedFrame {
+            width: 100%;
+            border: 2px solid #9a8c98;
+            border-radius: 12px;
+            transition: opacity 0.5s ease;
+        }
+        #capturedFrame {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+        #capturedFrame.show {
+            opacity: 1;
+        }
+        .control-panel {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            gap: 15px;
+        }
+        #countDisplay {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #22223b;
+            display: none;
+        }
+        #resultText {
+            font-size: 1.2rem;
+            color: #4a4e69;
+        }
+        #captureButton {
+            background-color: #22223b;
+            color: #f2e9e4;
+            border: none;
+            padding: 12px 28px;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        #captureButton:hover {
+            background-color: #4a4e69;
+        }
+        #progressBar {
+            -webkit-appearance: none;
+            width: 100%;
+            max-width: 360px;
+            height: 8px;
+            border-radius: 4px;
+            background: #c9ada7;
+            outline: none;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+        #progressBar::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #4a4e69;
+            cursor: pointer;
+        }
+        #progressBar::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #4a4e69;
+            cursor: pointer;
+        }

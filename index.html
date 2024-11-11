@@ -1,0 +1,30 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detección de Objetos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Detección de Objetos</h1>
+    <div class="video-wrapper">
+        <video id="cameraFeed" autoplay></video>
+        <img id="capturedFrame" alt="Imagen capturada">
+    </div>
+    <div class="control-panel">
+        <div id="countDisplay">3</div>
+        <div id="resultText">Resultado: -</div>
+        <button id="captureButton">Iniciar Captura</button>
+        <input type="range" id="progressBar" min="0" max="100" value="0">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+
+    <!-- Ahora se especifica el tipo de módulo -->
+    <script type="module" src="model.js"></script>
+    <script type="module" src="controller.js"></script>
+</body>
+</html>
